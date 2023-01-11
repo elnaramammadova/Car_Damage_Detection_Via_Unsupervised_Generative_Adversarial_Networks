@@ -38,5 +38,5 @@ Method 3: contains the improved version of the modified GANomaly framework (meth
 Method 4: contains the implementation of the original SkipGANomaly baseline model
 Method 5: contains the masked implementation of the original SkipGANomaly method with the introduction of random 128x128 masked patches in the arbitrary input image. Figure below shows the simple pipeline of the proposed method. 
 
-<img width="452" alt="image" src="https://user-images.githubusercontent.com/27391785/211730896-ebdabfd5-7c72-4908-b977-e7077ac3cea1.png">
+<img width="800" alt="image" src="https://user-images.githubusercontent.com/27391785/211730896-ebdabfd5-7c72-4908-b977-e7077ac3cea1.png">
 
