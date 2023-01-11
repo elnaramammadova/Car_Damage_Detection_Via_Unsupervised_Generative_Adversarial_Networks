@@ -29,7 +29,6 @@ The project consists of 5 experiments, each experiment grouped in different fold
 <ol>
     <li>Method 1: contains the implementation of the original GANomaly baseline model</li>
     <li>Method 2: contains a modified implementation of the original GANomaly model with the improvements indicated below</li>
-
         <ul>
             <li> larger latent dimension (512)</li>
             <li> larger kernel size (5x5)</li>
@@ -38,7 +37,6 @@ The project consists of 5 experiments, each experiment grouped in different fold
             <li> adding noise to the discriminator</li>
             <li> Two Time-scale Update Rule (TTUR)</li>
         </ul>
-    
     <li>Method 3: contains the improved version of the modified GANomaly framework (method 2) with the addition of Spectral Normalisation to the Discriminator network's convolutional kernel</li>
     <li>Method 4: contains the implementation of the original SkipGANomaly baseline model</li>
     <li>Method 5: contains the masked implementation of the original SkipGANomaly method with the introduction of random 128x128 masked patches in the arbitrary input image. Figure below shows the simple pipeline of the proposed method. </li>
