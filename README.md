@@ -25,5 +25,18 @@ This notebook uses an update version of the GANomaly proposed by Akcay et al, in
 <img src="model_figures_png/SkipGANomaly2.png" width="800" height="400">
 - <i>Figure B. SkipGANomaly model architechture with Encoder-Decoder Generator network and the discriminator. </i>
 
-The project consists of 5 experiments, each experiment group in different folders. 
+The project consists of 5 experiments, each experiment grouped in different folders (Method_1 to Method_5). 
+Method 1: contains the implementation of the original GANomaly baseline model
+Method 2: contains a modified implementation of the original GANomaly model with the improvements indicated below
+    - larger latent dimension (512)
+    - larger kernel size (5x5)
+    - soft and noisy labels
+    - modified adversarial loss function g_adv
+    - adding noise to the discriminator
+    - Two Time-scale Update Rule (TTUR)
+Method 3: contains the improved version of the modified GANomaly framework (method 2) with the addition of Spectral Normalisation to the Discriminator network's convolutional kernel
+Method 4: contains the implementation of the original SkipGANomaly baseline model
+Method 5: contains the masked implementation of the original SkipGANomaly method with the introduction of random 128x128 masked patches in the arbitrary input image. Figure below shows the simple pipeline of the proposed method. 
+
+<img width="452" alt="image" src="https://user-images.githubusercontent.com/27391785/211730896-ebdabfd5-7c72-4908-b977-e7077ac3cea1.png">
 
