@@ -9,6 +9,14 @@ The purpose of this project was to solve for anomaly detection problem via an ad
 
 Keywords: Generative Adversarial Learning, Anomaly Detection, GANomaly, SkipGANomaly, Image Reconstruction, Deep Neural Networks
 
-The dataset used in this project is a proprietary dataset that Tractable AI acquired in 2019 from a third-party software development company. The Nugen dataset contains ~9 million .jpeg images obtained from historic auto collision claim reports. The images are categorised by claim number, each containing multiple photographs of the same vehicle from different vantage points (usually taken by the repair shop or the owner). Each image is given a one-hot-encoded label (1 for True, 0 for False), based on the parts present in each image and whether or not they are damaged. 
+The dataset used in this project is a proprietary dataset that Tractable AI acquired in 2019 from a third-party software development company. The Nugen dataset contains ~9 million .jpeg images obtained from historic auto collision claim reports. The images are categorised by claim number, each containing multiple photographs of the same vehicle from different vantage points (usually taken by the repair shop or the owner). Each image is given a one-hot-encoded label (1 for True, 0 for False), based on the parts present in each image and whether or not they are damaged. The original raw data is stored in an S3 Object Storage solution offered by Amazon Web Services (AWS). Nugen_dataset folder contains the final list of filenames used in the training (undamaged) and testing (damaged). The csv files of the project matadate of the Nugen dataset is also provided in the Nugen_dataset folder. 
 
-The project consists of 5 experiments, each experiment 
+
+This notebook is based on the original GANomaly architecture proposed by Akcay et al, in 2018 (https://arxiv.org/abs/1805.06725). The model employs DCGAN architecutre (https://arxiv.org/abs/1511.06434) to create a new anomaly detection model using encoder-decoder-encoder sub-networks that generates high-dimensional image space. The model is trained solely on normal data (in our case undamaged car images), and it attemps to map the input image to a representative latent space, which is then used to reconstruct the generated output image. To map the generated image back to its latent representation, additional encoder network is used. The distance between the input image and the generated image, as well as their latent representations, are minimised during training.
+
+<img src="model_figures/GANomaly.png" width="800" height="400">
+- <i>Figure A. GANomaly model architechture with Encoder Decoder and Encoder network and the discriminator. </i>
+    
+    
+The project consists of 5 experiments, each experiment group in different folders. 
+
