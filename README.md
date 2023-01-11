@@ -14,7 +14,7 @@ The dataset used in this project is a proprietary dataset that Tractable AI acqu
 
 This notebook is based on the original GANomaly architecture proposed by Akcay et al, in 2018 (https://arxiv.org/abs/1805.06725). The model employs DCGAN architecutre (https://arxiv.org/abs/1511.06434) to create a new anomaly detection model using encoder-decoder-encoder sub-networks that generates high-dimensional image space. The model is trained solely on normal data (in our case undamaged car images), and it attemps to map the input image to a representative latent space, which is then used to reconstruct the generated output image. To map the generated image back to its latent representation, additional encoder network is used. The distance between the input image and the generated image, as well as their latent representations, are minimised during training.
 
-<img src="model_figures/GANomaly.png" width="800" height="400">
+<img src="model_figures_png/GANomaly.png" width="800" height="400">
 - <i>Figure A. GANomaly model architechture with Encoder Decoder and Encoder network and the discriminator. </i>
     
     
